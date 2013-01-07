@@ -16,15 +16,15 @@ import sys, os
 # If extensions (or modules to document with autodoc) are in another directory,
 # add these directories to sys.path here. If the directory is relative to the
 # documentation root, use os.path.abspath to make it absolute, like shown here.
-bintools_dir = __file__
+binlab_dir = __file__
 while True:
-    updir, f = os.path.split(bintools_dir)
+    updir, f = os.path.split(binlab_dir)
     if not f:
-        assert False, "Documentation does not have 'bintools' as a parent dir."
-    if f.strip() == 'bintools':
+        assert False, "Documentation does not have '{0}' as a parent dir.".format(binlab_dir)
+    if f.strip() == 'binlab':
         break
-    bintools_dir = updir
-sys.path.insert(0, bintools_dir)
+    binlab_dir = updir
+sys.path.insert(0, binlab_dir)
 
 # -- General configuration -----------------------------------------------------
 
